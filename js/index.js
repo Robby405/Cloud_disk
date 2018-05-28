@@ -183,7 +183,11 @@ function addFolderEvent(){
 		// 文件夹选中
 		check.onclick = function(e){
 			this.classList.toggle("checked");
-			console.log(isSelectAllFolder());
+			if(this.classList.contains("checked")){
+				item.classList.add("active");
+			}else{
+				item.classList.remove("active");
+			}
 			if(isSelectAllFolder()){
 				checkedAll.classList.add("checked");
 			}else{
